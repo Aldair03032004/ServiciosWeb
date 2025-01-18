@@ -1,0 +1,17 @@
+@model InventoryManagement.Models.StockLog
+
+<h1>Registrar Movimiento de Stock</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="ProductoId"></label>
+        <select asp-for="ProductoId" asp-items="ViewBag.Productos"></select>
+        <span asp-validation-for="ProductoId"></span>
+    </div>
+    <div>
+        <label asp-for="Cantidad"></label>
+        <input asp-for="Cantidad" />
+        <span asp-validation-for="Cantidad"></span>
+    </div>
+    <button type="submit">Registrar</button>
+</form>

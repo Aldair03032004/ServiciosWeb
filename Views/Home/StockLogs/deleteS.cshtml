@@ -1,0 +1,11 @@
+@model InventoryManagement.Models.StockLog
+
+<h1>Eliminar Movimiento de Stock</h1>
+
+<h2>¿Estás seguro de que deseas eliminar el movimiento de stock para el producto "@Model.Producto.Nombre"?</h2>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Eliminar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>

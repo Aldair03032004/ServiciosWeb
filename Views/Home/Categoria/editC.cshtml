@@ -1,0 +1,12 @@
+@model InventoryManagement.Models.Categoria
+
+<h1>Editar Categoría</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label>Nombre</label>
+        <input asp-for="Nombre" />
+    </div>
+    <button type="submit">Guardar</button>
+</form>

@@ -1,0 +1,6 @@
+@model InventoryManagement.Models.Categoria
+
+<h1>Detalles de la Categoría</h1>
+<p>Nombre: @Model.Nombre</p>
+<a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+<a asp-action="Index">Volver a la lista</a>

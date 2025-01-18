@@ -1,0 +1,9 @@
+@model InventoryManagement.Models.Categoria
+
+<h1>Eliminar Categoría</h1>
+<p>¿Estás seguro de que deseas eliminar la categoría "@Model.Nombre"?</p>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Eliminar</button>
+</form>
+<a asp-action="Index">Cancelar</a>

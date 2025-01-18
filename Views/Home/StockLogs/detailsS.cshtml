@@ -1,0 +1,12 @@
+@model InventoryManagement.Models.StockLog
+
+<h1>Detalles del Movimiento de Stock</h1>
+
+<div>
+    <h2>Producto: @Model .Producto.Nombre</h2>
+    <p>Cantidad: @Model.Cantidad</p>
+    <p>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+        <a asp-action="Index">Volver a la lista</a>
+    </p>
+</div>

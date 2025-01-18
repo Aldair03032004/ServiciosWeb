@@ -1,0 +1,31 @@
+@model IEnumerable<InventoryManagement.Models.StockLog>
+
+<h1>Movimientos de Stock</h1>
+
+<p>
+    <a asp-action="Create">Registrar Nuevo Movimiento</a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Producto.Nombre</td>
+                <td>@item.Cantidad</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalles</a> |
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

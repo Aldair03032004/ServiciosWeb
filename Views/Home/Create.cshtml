@@ -1,0 +1,17 @@
+@model InventoryManagement.Models.Producto
+
+<h1>Crear Nuevo Producto</h1>
+
+<form asp-action="Create">
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre"></span>
+    </div>
+    <div>
+        <label asp-for="CategoriaId"></label>
+        <select asp-for="CategoriaId" asp-items="ViewBag.Categorias"></select>
+        <span asp-validation-for="CategoriaId"></span>
+    </div>
+    <button type="submit">Crear</button>
+</form>

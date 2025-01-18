@@ -1,0 +1,18 @@
+@model InventoryManagement.Models.Producto
+
+<h1>Editar Producto</h1>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div>
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" />
+        <span asp-validation-for="Nombre"></span>
+    </div>
+    <div>
+        <label asp-for="CategoriaId"></label>
+        <select asp-for="CategoriaId" asp-items="ViewBag.Categorias"></select>
+        <span asp-validation-for="CategoriaId"></span>
+    </div>
+    <button type="submit">Guardar Cambios</button>
+</form>
